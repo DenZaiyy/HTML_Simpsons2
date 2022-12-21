@@ -1,0 +1,299 @@
+/* ---------- RESET & ROOT SECTION ---------- */
+:root {
+  --background__color: #fff300;
+  --white__color: #fff;
+  --gray__color: #b3b3b35d;
+  --black__color: #000;
+  --yellow__color: #ffc400;
+  --bgblue: rgb(0, 110, 255);
+  --footer__bg: rgb(17, 0, 255);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ---------- HEADER ---------- */
+body {
+  background: var(--background__color);
+  display: flex;
+  flex-direction: column;
+  padding: 0 20%;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  max-height: 50vh;
+}
+
+header strong {
+  background: var(--bgblue);
+  color: var(--white__color);
+  font-size: 32px;
+  padding: 5px 0 5px 0;
+}
+
+.img__header {
+  max-height: 600px;
+  overflow: hidden;
+  border-top: 1px solid var(--white__color);
+  border-bottom: 1px solid var(--white__color);
+}
+
+.img__header img {
+  width: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+/* ---------- NAVIGATION ---------- */
+nav {
+  background: var(--bgblue);
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style-type: none;
+  overflow: hidden;
+}
+
+nav ul li a {
+  display: block;
+  padding: 20px;
+  color: var(--white__color);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+nav ul li a:hover {
+  transition: all 0.7s;
+  background: var(--white__color);
+  color: var(--bgblue);
+}
+
+/* ---------- MAIN SECTION ---------- */
+
+main {
+  display: flex;
+  flex-direction: row;
+  background: var(--white__color);
+  border-top: 2px dashed rgb(0, 110, 255);
+}
+
+.__desc {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  padding: 20px;
+}
+
+.images {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.simpson_movie_img {
+  width: 100%;
+  height: 15vw;
+  margin: 5px;
+  border: 1px solid #000;
+  background-position: 0 -10px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../img/movie_simpson.jpg");
+}
+
+.__desc h1 {
+  text-transform: uppercase;
+  color: var(--yellow__color);
+}
+
+.__desc p {
+  margin: 10px 0;
+  text-align: justify;
+}
+
+/* ---------- ABOUT SECTION ---------- */
+
+.__about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 300px;
+  background: var(--bgblue);
+  color: var(--white__color);
+  margin: 4% 10px 10px 0;
+}
+
+.__about figure {
+  text-align: center;
+}
+
+.__about figure img {
+  width: 70%;
+  border: 1px solid var(--white__color);
+  height: auto;
+}
+
+.__about p {
+  padding: 10px;
+  text-align: justify;
+}
+/* ---------- FOOTER SECTION ---------- */
+footer {
+  padding: 5px 0 5px 0;
+  background: var(--footer__bg);
+  color: var(--white__color);
+  text-align: center;
+}
+/* ---------- MOBILE SECTION ---------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  body {
+    display: block;
+    padding: 0;
+  }
+
+  header {
+    max-height: 25vh;
+  }
+
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  main {
+    flex-direction: column;
+  }
+
+  .__desc {
+    width: auto;
+    padding: 10px;
+  }
+
+  .__desc p {
+    margin: 15px;
+  }
+
+  #img_desktop_1,
+  #img_desktop_2 {
+    display: none;
+  }
+
+  .__desc h1 {
+    text-align: center;
+  }
+
+  .__about {
+    display: block;
+    margin: auto;
+    max-width: none;
+  }
+
+  .__about figure {
+    margin-top: 10px;
+  }
+
+  .__about figure img {
+    width: 50%;
+  }
+
+  .__about p {
+    padding: 15px;
+  }
+
+  .images {
+    display: block;
+  }
+
+  .images .simpson_movie_img {
+    height: 50vh;
+    margin: auto;
+  }
+
+  footer small {
+    font-size: 0.9em;
+  }
+}
+
+/* ---------- TABLETTE SECTION ---------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  body {
+    display: block;
+    padding: 0;
+  }
+
+  header {
+    max-height: 35vh;
+  }
+
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .__desc p,
+  .__about p,
+  nav ul li,
+  footer small,
+  .__about figure figcaption i {
+    font-size: 1.2em;
+  }
+
+  main {
+    flex-direction: column;
+  }
+
+  .__desc {
+    width: auto;
+    padding: 10px;
+  }
+
+  .__desc p {
+    margin: 15px;
+  }
+
+  #img_desktop {
+    display: block;
+  }
+
+  .__desc h1 {
+    text-align: center;
+  }
+
+  .__about {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    max-width: none;
+  }
+
+  .__about figure {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .__about figure img {
+    width: 80%;
+  }
+
+  .__about p {
+    margin: 25px;
+  }
+
+  .images {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .images .simpson_movie_img {
+    height: 30vh;
+  }
+}
